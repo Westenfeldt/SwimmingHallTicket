@@ -25,6 +25,7 @@ namespace SwimmingHallTicket
             double familie = 100;
             double total;
             double totalrabat;
+            double sparet;
 
             switch (typebillet.ToLower())
             {
@@ -50,7 +51,8 @@ namespace SwimmingHallTicket
                     if (antalbarn >= 10)
                     {
                         total = antalbarn * child;
-                        totalrabat = total - (total * 0.10);
+                        sparet = total * 0.10;
+                        totalrabat = total - sparet;
 
 
                         Console.Write("Din pris er ");
@@ -58,6 +60,7 @@ namespace SwimmingHallTicket
                         Console.Write(totalrabat);
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.Write(" kr");
+                        Console.WriteLine(" Du har sparet {0} kr", sparet);
 
                     }
                     else
