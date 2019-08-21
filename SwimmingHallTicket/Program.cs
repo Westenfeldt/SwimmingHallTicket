@@ -47,7 +47,7 @@ namespace SwimmingHallTicket
                     string antalchild = Console.ReadLine();
                     double antalbarn = float.Parse(antalchild);
 
-                    if (antalbarn > 10)
+                    if (antalbarn >= 10)
                     {
                         total = antalbarn * child;
                         totalrabat = total - (total * 0.10);
